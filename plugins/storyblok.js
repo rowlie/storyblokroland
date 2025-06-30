@@ -5,5 +5,9 @@ export default defineNuxtPlugin(({ vueApp }) => {
   vueApp.use(StoryblokVue, {
     accessToken: process.env.STORYBLOK_TOKEN,
     use: [apiPlugin],
+    apiOptions: {
+      region: 'eu',
+      version: 'published'
+    }
   });
 });
